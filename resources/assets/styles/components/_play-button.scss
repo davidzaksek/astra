@@ -1,0 +1,73 @@
+$play-button-width: 48px;
+$play-button-border-width: 80px;
+.play-button {
+    position: relative;
+    width: $play-button-width;
+    height: $play-button-width;
+    background: $white;
+    cursor: pointer;
+    z-index: 1;
+    @include transition(background-color 0.2s ease);
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(50% - 6px);
+        left: calc(50% - 4px);  
+        width: 0; 
+        height: 0; 
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent; 
+        border-left: 9px solid $dark-blue;
+        z-index: 1;
+    }
+
+    &.small {
+        width: 32px;
+        height: 32px;
+
+        &::after {
+            top: calc(50% - 4px);
+            left: calc(50% - 3px);
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent; 
+            border-left: 7px solid $white;
+        }
+
+        &.blue {
+            background: $primary;
+        }
+    }
+
+    &.smaller {
+        width: 16px;
+        height: 16px;
+
+        &::after {
+            top: calc(50% - 3px);
+            left: calc(50% - 2px);
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent; 
+            border-left: 5px solid $white;
+        }
+
+        &.blue {
+            background: $primary;
+        }
+    }
+
+    + .border {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(-#{($play-button-border-width - $play-button-width)/2});
+            left: calc(-#{($play-button-border-width - $play-button-width)/2});
+            width: $play-button-border-width; 
+            height: $play-button-border-width;
+            background-color: rgba(255,255,255,0.25);
+            z-index: 0;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@mixin arrow($arrowSize: 20px, $arrowBorderSize: 3px, $arrowBarWidth: 2px, $arrowBarHeight: 25px, $arrowBarLeft: 5px) {
+    display: inline-block;
+    height: $arrowSize;
+    position: relative;
+    width: $arrowSize;
+  
+    &::after {
+        border-bottom-style: solid;
+        border-bottom-width: $arrowBorderSize;
+        border-right-style: solid;
+        border-right-width: $arrowBorderSize;
+        content: '';
+        display: inline-block;
+        height: $arrowSize;
+        width: $arrowSize;
+        position: absolute;
+        top: 1px;
+        left: -4px;
+    }
+
+    &.small {
+        &::after {
+            top: 0px;
+            left: 0px;
+        }
+    }
+  
+    // Add Arrow Bar
+    &::before {
+        bottom: -1px;
+        content: '';
+        height: $arrowBarHeight;
+        position: absolute;
+        left: $arrowBarLeft;
+        transform-origin: bottom;
+        width: $arrowBarWidth;
+        @include rotate(-45deg);
+    }
+  
+    // States
+    &.is-top {
+        @include rotate(225deg);
+    }
+
+    &.is-top-right {
+        @include rotate(270deg);
+        top: 27px !important;
+    }
+  
+    &.is-right {
+        margin-left: 35px;
+        @include rotate(315deg);
+    }
+  
+    &.is-bottom {
+        @include rotate(45deg);
+    }
+  
+    &.is-left {
+        margin-right: 35px;
+        @include rotate(135deg);
+    }
+}
+  
+@mixin arrowColor($color) {
+    &,
+    .arrow {
+        &::after {
+            border-color: $color;
+        }
+
+        &.is-triangle::after {
+            border-color: transparent;
+            border-bottom-color: $color;
+        }
+
+        &::before {
+            background-color: $color;
+        }
+    }
+}
+
+// ARROW WITH BAR AND CORNER
+.full-arrow {
+    margin-bottom: 1px;
+    @include arrow(10px, 2px, 2px, 18px);
+    @include arrowColor($dark-blue);
+
+    &.small {
+        @include arrow(5px, 2px, 2px, 11px);
+    }
+    
+    &.blue {
+        @include arrowColor($primary);
+    }
+    
+    &.white {
+        @include arrowColor($white);
+    }
+
+    &.dark {
+        @include arrowColor($darkerBg);
+    }
+
+    &.yellow {
+        @include arrowColor($yellow);
+    }
+}
+
+// ARROW WITH CORNER ONLY
+.corner-arrow {
+    position: relative;
+    border: solid $dark-blue;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 4px 11px 0 -3px;
+    vertical-align: text-top;
+
+    &.right {
+        @include rotate(-45deg);
+    }
+    
+    &.left {
+        @include rotate(135deg);
+    }
+    
+    &.up {
+        @include rotate(-135deg);
+    }
+    
+    &.down {
+        @include rotate(45deg);
+    }
+}
+
+// SOLID TRIANGLE ARROW
+$border_size: 9px;
+$visible_arrow_size: #{$border_size * 1.7};
+.tri-arrow {
+    width: 0; 
+    height: 0;
+    display: block;
+    border-top: $border_size solid transparent;
+    border-bottom: $border_size solid transparent;
+
+    &.right {
+        border-left: $visible_arrow_size solid $primary;
+    }
+}

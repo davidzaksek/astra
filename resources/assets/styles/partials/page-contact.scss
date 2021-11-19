@@ -1,0 +1,122 @@
+.contact-block {
+    padding: 50px 0;
+
+    .h5 {
+        margin: 24px 0;
+    }
+
+    .btn.yellow {
+        width: 100%;
+        margin-top: 32px;
+        color: $darkBg !important;
+    }
+
+    .form-section {
+        position: relative;
+        z-index: 12;
+        max-width: 626px;
+
+        .first_col,
+        .last_col {
+            width: calc(50% - 16px);
+            display: inline-block;
+        }
+
+        .first_col {
+            margin-right: 32px;
+        }
+    }
+
+    .social-section {
+        position: relative;
+        margin-top: 92px;
+        right: 1px;
+        z-index: 12;
+    }
+
+    .social-links {
+        margin-top: 20px;
+        font-size: 0;
+    }
+
+        .social-link {
+            position: relative;
+            width: 55px;
+            height: 55px;
+            background-color: $primary;
+            text-align: center;
+
+            img {
+                display: inline-block;
+                height: 24px;
+                margin: 15px 0;
+                @include transition(all 0.25s ease);
+            }
+
+            &:nth-child(2n) {
+                bottom: -55px;
+            }
+
+            &:nth-child(2) {
+                background-color: $primary-darker;
+            }
+
+            &:nth-child(4) {
+                background-color: $darkBg;
+            }
+
+            @media #{$bp_1080} {
+                &:hover,
+                &:focus {
+
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+}
+
+@media #{$bp_max_1080} {
+    .contact-block {
+        padding: 40px 20px 10px;
+
+        .pull-left,
+        .pull-right {
+            float: none;
+        }
+
+        .form-section {
+            max-width: 100%;
+    
+            .first_col,
+            .last_col {
+                width: 100%;
+                display: block;
+            }
+    
+            .first_col {
+                margin-right: 0;
+            }
+        }
+
+        .social-section {
+            margin-top: 64px;
+            right: auto;
+        }
+    
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+            grid-gap: 11%;
+        }
+    
+            .social-link {
+                flex: 1 0 calc(25% - 10px);
+
+                &:nth-child(2n) {
+                    bottom: auto;
+                }
+            }
+    }
+}

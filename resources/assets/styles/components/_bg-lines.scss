@@ -1,0 +1,55 @@
+
+.bg-lines,
+.m-lines,
+.bg-lines::after,
+.bg-lines::before,
+.m-lines:after,
+.m-lines::before {
+    position: fixed;
+}
+
+.bg-lines,
+.m-lines {
+    z-index: 10;
+    
+    &::before,
+    &::after,
+    & {
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        min-height: 100vh;
+        background: rgba(138, 155, 173, .15);
+        content: '';
+    }
+
+    @media #{$bp_max_1080} {
+        display: none;
+    }
+}
+
+// Left lines
+.bg-lines {
+    left: calc(50% - 533px);
+    
+    &::before {
+        left: calc(50% - 314px);
+    }
+
+    &::after {
+        left: calc(50% - 128px);
+    }
+}
+
+// Right lines
+.m-lines {
+    right: calc(50% - 533px);
+
+    &::before {
+        right: calc(50% - 313px);
+    }
+
+    &::after {
+        right: calc(50% - 94px);
+    }
+}

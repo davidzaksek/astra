@@ -1,0 +1,28 @@
+.scroll-dialog {
+    position: fixed;
+    left: 0;
+    z-index: 15;
+    top: 0;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    background: $darkBg;
+    opacity: 1;
+    @include transition(opacity 0.5s ease);
+
+    &.closed {
+        opacity: 0;
+        position: absolute;
+        left: -9999px;
+    }
+
+    @media #{$bp_h_885} {
+        overflow-y: scroll;
+    }
+
+    &.close--video-dialog {
+        z-index: 100;
+        cursor: default !important;
+    }
+}

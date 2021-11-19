@@ -1,0 +1,147 @@
+.chapters-section {
+    font-size: 0;
+
+    .btn.play {
+        margin: 32px 0;
+    }
+    
+    .btn.box.blue {
+        position: absolute;
+        bottom: -116px;
+        right: 0;
+    }
+
+    .btn.box.white {
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+    }
+
+    .inner-overlap {
+        width: #{$inner_child_max_width + 105px};
+    }
+
+    $main-content-width: 514px;
+    .left-content {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        max-width: $main-content-width;
+    }
+
+    // Videos layout
+    .chapter-videos {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - #{$main-content-width});
+        margin-bottom: 180px;
+        padding-left: 35px;
+    }
+
+        .contains-video {
+            position: relative;
+            z-index: 12;
+            display: inline-block;
+            vertical-align: top;
+            width: 292px;
+            height: 258px;
+            
+            &:not(:nth-child(2n)) {
+                margin-right: 36px;
+            }
+        }
+
+            .video {
+
+                @media #{$bp_1080} {
+                    &:hover,
+                    &:focus {
+                        .video-title {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+
+            .video-img {
+                width: 296px;
+                height: 168px;
+                border: 2px solid #fff;
+            }
+
+            .video-title {
+                color: $white;
+                line-height: 20px;
+                margin: 14px 0 8px;
+
+                @include transition(color 0.25s ease);
+            }
+
+            .video-details {
+                color: $light;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+                .bullet {
+                    margin: 0 3px;
+                }
+}
+
+@media #{$bp_max_1080} {
+    .chapters-section {
+        padding: 0 20px 64px;
+
+        .btn.box.blue {
+            position: relative;
+            width: 100%;
+            bottom: auto;
+            right: auto;
+            margin-top: 32px;
+
+            .text {
+                max-width: 160px;
+            }
+        }
+
+        .btn.play {
+            margin: 24px 0 64px;
+        }
+
+        .inner-overlap {
+            width: 100%;
+        }
+    
+        .left-content {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        // Videos layout
+        .chapter-videos {
+            width: 100%;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        .contains-video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 42px;
+            
+            &:not(:nth-child(2n)) {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        .video-img {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+$top-bottom-padding: 85px;
+$dialog-width: 1280px;
+$dialog-height: 740px;
+.video-dialog {
+    position: absolute;
+    top: calc(50% - #{$dialog-height/2});
+    left: calc(50% - #{$dialog-width/2});
+    z-index: 100; // Above custom cursor
+    width: 100%;
+    max-width: $dialog-width;
+    height: $dialog-height;
+    min-height: $dialog-height;
+
+    .close-dialog {
+        top: -78px;
+    }
+
+    // Height
+    @media #{$bp_h_885} {
+        top: 0;
+        height: #{($dialog-height + ($top-bottom-padding * 2))};
+        min-height: #{($dialog-height + ($top-bottom-padding * 2))};
+
+        .padding {
+            padding: $top-bottom-padding 0;
+        }
+
+        .close-dialog {
+            top: 7px;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        min-height: $dialog-height;
+    }
+}
+
+
+@media #{$bp_max_1080} {
+    .video-dialog {
+        top: 0;
+        left: auto;
+        height: auto;
+        min-height: 100%;
+
+        .close-dialog {
+            margin: 20px;
+            top: 0;
+        }
+
+        .video-container {
+            min-height: 100vh;
+            @include vertical-text-align();
+        }
+    
+        iframe {
+            min-height: 400px;
+        }
+    }
+}

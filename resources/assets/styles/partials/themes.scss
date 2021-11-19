@@ -1,0 +1,112 @@
+.themes-block {
+    padding: 140px 0;
+
+    .lh2 {
+        max-width: 514px;
+    }
+
+    .themes-section {
+        width: 1164px;
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+
+        .theme {
+            position: relative;
+            width: 320px;
+            padding: 20px 24px 20px 2px;
+            @include transition(background-color 0.15s ease);
+
+            // Exclude first column
+            // &:not(:nth-of-type(3n+1)) {
+            //     margin-left: 53px;
+            // }
+
+            // Only second column
+            &:nth-child(3n-1) {
+                margin-left: 84px;
+            }
+
+            // Only third column
+            &:nth-child(3n) {
+                margin-left: 120px;
+            }
+
+            .title {
+                color: $white;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 16px;
+                margin-bottom: 12px;
+                @include transition(margin-left 0.15s ease);
+            }
+
+            .full-arrow {
+                position: absolute;
+                top: 22px;
+                right: 24px;
+            }
+
+            @media #{$bp_1080} {
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+
+                    .title,
+                    .video-count {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+
+            .video-count {
+                color: $white;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: lowercase;
+                opacity: .75;
+                @include transition(margin-left 0.15s ease);
+            }
+
+    .btn.box {
+        position: absolute;
+        right: 0;
+        bottom: -206px;
+    }
+}
+
+@media #{$bp_max_1080} {
+
+    .themes-block {
+        padding: 48px $inner_lr_padding;
+
+        .themes-section {
+            width: 100%;
+            margin-top: 35px;
+            padding-bottom: 0;
+        }
+    
+            .theme {
+                position: relative;
+                width: 100%;
+                padding: 12px 0;
+    
+                // Only second column
+                &:nth-child(3n-1) {
+                    margin-left: 0;
+                }
+    
+                // Only third column
+                &:nth-child(3n) {
+                    margin-left: 0;
+                }
+
+                .full-arrow {
+                    position: absolute;
+                    top: 16px;
+                    right: 0;
+                }
+            }
+    }
+}

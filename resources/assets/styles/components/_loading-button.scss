@@ -1,0 +1,49 @@
+.load-btn {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 16px);
+        display: none;
+        width: 18px;
+        height: 18px;
+        border: 6px solid $white;
+        border-top: 6px solid transparent;
+        border-radius: 100%;
+    }
+
+    &.blue-spinner {
+        &::after {
+            border: 6px solid $primary;
+            border-top: 6px solid transparent;
+        }
+    }
+
+    &.loading {
+
+        color: transparent !important;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            animation: btn-load-animate infinite linear 1s;
+        }
+    }
+}
+
+@keyframes btn-load-animate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+        
+    50% {
+        transform: rotate(180deg);
+        opacity: .35;
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}

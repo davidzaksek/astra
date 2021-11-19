@@ -1,0 +1,66 @@
+.close-icon {
+    position: absolute;
+    right: 64px;
+    top: 64px;
+    width: 24px;
+    height: 24px;
+    cursor: none;
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 10px;
+        content: '';
+        height: 24px;
+        width: 2px;
+        background-color: #fff;
+    }
+
+    @media #{$bp_1080} {
+        &:hover {
+            &::before,
+            &::after {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.close-dialog {
+    position: absolute;
+    top: 0;
+    right: -22px;
+    width: 72px;
+    height: 78px;
+    cursor: none;
+
+    @media #{$bp_1080} {
+        &:hover {
+            .close-icon {
+                &::before,
+                &::after {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+    .close-icon {
+        right: 20px;
+        top: 28px;
+    }
+}
+
+.video-dialog {
+    .close-dialog {
+        cursor: pointer;
+    }
+}

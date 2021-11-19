@@ -1,0 +1,101 @@
+$top_bottom_negatives: -7px;
+.navicon {
+    position: relative;
+    top: 11px;
+    right: -15px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    z-index: 101;
+
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 23px;
+        right: 17px;
+        height: 3px;
+        width: 16px;
+        border-radius: 3px;
+        background: $dark-blue;
+        opacity: 1;
+        @include transition(.25s ease-in-out);
+    }
+
+    .burger-cross {
+        position: relative;
+        top: 24px;
+        left: 5px;
+        @include origin(left center);
+        @include transition(all 0.35s ease);
+
+        &::before,
+        &::after {
+            display: block;
+            position: absolute;
+            right: 22px;
+            content: "";
+            height: 3px;
+            width: 18px;
+            border-radius: 2px;
+            background: $dark-blue;
+            opacity: 1;
+            @include rotate(0deg);
+            @include transition(.25s ease-in-out);
+        }
+        &::before {
+            width: 24px;
+            top: $top_bottom_negatives;
+            @include origin(right center);
+        }
+        &::after {
+            bottom: #{$top_bottom_negatives - 1px};
+            width: 7px;
+            @include origin(right center);
+        }
+    }
+      
+    &.open {
+        &::before {
+            opacity: 0;
+        }
+
+        .burger-cross {
+
+            &::before,
+            &::after {
+                height: 3px;
+                background: #fff;
+                width: 23px;
+            }
+
+            &::before {
+                @include rotate(-45deg);
+                top: -9px;
+            }
+
+            &::after {
+                @include rotate(45deg);
+                bottom: -10px;
+            }
+        }
+    }
+}
+
+// DARK HEADER
+.template-topic,
+.template-chapter,
+.template-video {
+    .navicon {
+        &::before {
+            background: $white;
+        }
+        .burger-cross {
+    
+            &::before,
+            &::after {
+                background: $white;
+            }
+        }
+    }
+}

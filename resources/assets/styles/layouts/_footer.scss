@@ -1,0 +1,145 @@
+.footer {
+    color: #fff;
+
+    .primary {
+        padding: 56px 0;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        .site-logo {
+            position: absolute;
+            top: -14px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 0;
+        }
+    }
+
+        .internal-links,
+        .social-links {
+            position: relative;
+            z-index: 1;
+
+            a {
+                @media #{$bp_1080} {
+                    &:hover,
+                    &:focus {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .internal-links {
+            a {
+                margin-left: 32px;   
+            }
+        }
+        .social-links {
+            a {
+                margin-right: 32px;   
+            }
+        }
+
+    .secondary {
+        padding: 15px 0;
+        font-size: 10px;
+
+        .designed-by {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+
+            p {
+                font-weight: 600;
+                font-size: 10px;
+                color: $white;
+                letter-spacing: .5px;
+            }
+
+            a {
+                color: $yellow;
+            }
+        }
+    }
+}
+
+@media #{$bp_max_820} {
+
+    .footer {
+        .primary {
+            padding: 40px 0 120px;
+
+            .site-logo {
+                position: relative;
+                top: auto;
+                width: 100%;
+            }
+
+            .pull-left {
+                float: right;
+                text-align: right;
+
+                a {
+                    margin-right: 0;
+
+                    &:not(:first-of-type) {
+                        margin-left: 32px;
+                    }
+                }
+            }
+
+            .pull-right {
+                float: left;
+                text-align: left;
+
+                a {
+                    margin-left: 0;
+                    margin-right: 32px;
+                }
+            }
+
+            .internal-links,
+            .social-links {
+                width: 50%;
+                margin-top: 40px;
+
+                a {
+                    padding: 8px 0;
+                }
+            }
+        }
+
+        .secondary {
+            padding: 0;
+
+            text-align: center;
+            .pull-left,
+            .pull-right {
+                float: none;
+            }
+
+            .quote {
+                position: relative;
+                top: -110px;
+            }
+
+            .copyright {
+                position: relative;
+                top: -45px;
+            }
+
+            .designed-by {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+}

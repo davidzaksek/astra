@@ -1,0 +1,310 @@
+.donate-block {
+
+    .about-section {
+        .desc {
+            max-width: 516px;
+            padding: 24px 0;
+    
+            p:first-of-type {
+                opacity: 1;
+                font-size: 16px;
+                line-height: 28px;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            }
+
+            strong {
+                font-size: 28px;
+                line-height: 40px;
+                font-weight: 600;
+
+                @include underline-text();
+
+                u {
+                    &:before {
+                        bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .stripe-form {
+
+        .wpf_form_wrapper form.wpf_form .wpf_form_group .wpf_form_item_group .wpf_input-group-prepend .wpf_input-group-text-prepend {
+            border-radius: 0 !important;
+            border: 0 !important;
+        }
+
+        .wpf_input_content input {
+            margin-bottom: 0;
+        }
+
+        .wpf_item_custom_payment_input {
+            width: 100%;
+            float: left;
+
+            label {
+                float: left;
+                background-color: transparent !important;
+                color: $dark-blue !important;
+                text-align: left !important;
+                padding-left: 0 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .wpf_input_content {
+                width: 50%;
+            }
+        }
+
+        .wpf_loading_svg,
+        .wpf_form_notices {
+            display: none !important;
+        }
+    }
+
+    .trr-form,
+    .bitcoin-form {
+        text-align: left;
+    }
+
+    .trr-form {
+        
+        .para {
+            margin-bottom: 32px;
+        }
+        
+            p {
+                font-size: 16px;
+                color: $dark-blue;
+                line-height: 24px;
+                font-weight: 600;
+                margin-bottom: 24px;
+            }
+
+        input {
+            margin-bottom: 24px;
+        }
+    }
+
+    .bitcoin-form {
+
+        .copy-code-section {
+            position: relative;
+
+            input {
+                padding-right: 64px;
+            }
+        }
+
+            .copy-btn {
+                @include reset-btn();
+                position: absolute;
+                top: 16px;
+                right: 16px;
+
+                width: 32px;
+                height: 32px;
+                background-color: $primary;
+                background-image: url("../images/copy.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+
+                .copy-text-hover {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    top: -56px;
+                    right: 0;
+
+                    padding: 12px 16px;
+                    color: $white;
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-weight: bold;
+                    background-color: $primary;
+                    pointer-events: none;
+                    @include transition(all 0.25s ease);
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: -5px;
+                        right: 12px;
+                        width: 0; 
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 6px solid $primary;
+                        z-index: 1;
+                    }
+                }
+
+                @media #{$bp_1080} {
+                    &:hover,
+                    &:focus {
+
+                        .copy-text-hover {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+    }
+
+    .bitcoin-qrcode-img {
+        width: 230px;
+    }
+
+    .tabs {
+        overflow: hidden;
+        margin-bottom: 32px;
+
+        button {
+            @include reset-btn();
+            width: 50%;
+            float: left;
+
+            padding: 14px 16px;
+            color: $placeholder;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: $inputBg;
+            @include transition(all 0.15s ease);
+
+            &.active {
+                color: $white;
+                background-color: $primary;
+            }
+
+            @media #{$bp_1080} {
+                &:hover,
+                &:focus {
+                    color: $white;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+        animation: fadeEffect .5s;
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+}
+
+.thank-you-section {
+    padding: 50px 0 240px;
+    margin-bottom: 130px;
+    text-align: center;
+
+    .btn.box.blue {
+        position: absolute;
+        bottom: -306px;
+        right: 0;
+    }
+
+    .h5 {
+        max-width: 623px;
+        margin: 24px auto 40px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: .5px;
+    }
+
+    .donators {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+        grid-gap: 25px;
+        grid-row-gap: 8px;
+        text-align: left;
+    }
+
+        .donator {
+            flex: 1 0 calc(20% - 10px);
+            font-size: 14px;
+            color: $white;
+            font-weight: 600;
+            line-height: 24px;
+            text-transform: capitalize;
+        }
+}
+
+@media #{$bp_max_1080} {
+
+    .donate-block {
+        
+        .donation-block {
+            padding: 40px 20px 100px;
+        }
+
+        .about-section {
+            .desc {
+                max-width: 100%;
+                padding: 24px 0;
+        
+                p:first-of-type {
+                    opacity: .75;
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    text-transform: none;
+                    margin-bottom: 16px;
+                }
+    
+                strong {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-weight: bold;
+                    margin-bottom: 16px;
+    
+                    u {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .thank-you-section {
+        padding: 50px 20px 50px;
+
+        .btn.box.blue {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            width: 100%;
+            margin-top: 70px;
+
+            .text {
+                max-width: 150px;
+            }
+        }
+
+        .donators {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+    
+            .donator {
+                flex: 1 0 calc(50% - 10px);
+            }
+    }
+}

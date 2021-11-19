@@ -1,0 +1,175 @@
+.ph-styles {
+    ::-webkit-input-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: bold;
+    }
+    ::-moz-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: bold;
+    }
+    :-ms-input-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: bold;
+    }
+    :-moz-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: bold;
+    }
+}
+
+.form-inputs {
+
+    ::-webkit-input-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: 600;
+    }
+    ::-moz-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: 600;
+    }
+    :-ms-input-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: 600;
+    }
+    :-moz-placeholder {
+        color: $placeholder;
+        font-family: $proxima-nova;
+        font-weight: 600;
+    }
+
+    input[type=password],
+    input[type=email],
+    input[type=text],
+    input[type=url],
+    input[type=tel],
+    textarea,
+    select {
+
+        width: 100%;
+        height: 64px;
+        line-height: 64px;
+        margin: 0 0 32px;
+        padding: 0 24px;
+
+        color: $dark-blue;
+        font-size: 14px;
+        font-family: $proxima-nova;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        border: 0;
+        border-radius: 0;
+        background: $inputBg;
+        box-shadow: none;
+        outline: none;
+        -webkit-appearance: none !important;
+
+        @include transition(all 0.15s ease);
+
+        &:focus {
+            &::-ms-value {  
+                outline: none !important;
+            }
+            &:not(.parsley-error) {
+                border-color: $primary;
+            }
+        }
+
+        &:disabled {
+            cursor: none;
+        }
+    }
+
+    textarea {
+        min-height: 200px;
+        line-height: 22px;
+        margin: 0;
+        padding: 24px;
+        resize: none;
+    }
+
+    .select-box {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+    
+        select {
+            
+            position: relative;        
+            padding-right: 50px;    
+            @include appearance(none);
+            background-color: transparent !important;
+            cursor: none;
+            z-index: 2;
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            
+            // background-image: url("../images/arrow-down.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18%;
+            z-index: 1;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: bold;
+        color: $dark-blue;
+    }
+
+    .field_required {
+        margin-left: -3px;
+        color: $dark-blue !important;
+    }
+
+    input.parsley-error {
+        border: 2px solid $red;
+        color: $red;
+    }
+
+    .parsley-required,
+    .help-block span {
+        display: none;
+    }
+
+    .alert-success {
+        font-size: 16px;
+        color: $dark-blue;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+}
+
+// Hide arrows
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,127 @@
+@mixin h1() {
+    color: $dark-blue;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 64px;
+
+    &.light {
+        color: $white;
+    }
+
+    @media #{$bp_max_1080} {
+        font-size: 40px;
+        line-height: 56px;
+    }
+}
+
+@mixin h2() {
+    color: $dark-blue;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 52px;
+
+    @media #{$bp_max_1080} {
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+@mixin h3() {
+    color: $dark-blue;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+@mixin h4() {
+    color: $dark-blue;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 36px;
+
+    @media #{$bp_max_1080} {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@mixin h5() {
+    color: $dark-blue;
+    font-family: $proxima-nova;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+@mixin h6() {
+    font-family: $proxima-nova;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+@mixin heading-styles {
+    strong {
+        color: $primary;
+    }
+}
+
+@mixin underline-text() {
+    strong {
+        position: relative;
+        display: inline-block;
+    }
+    u {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-decoration: none;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -6px;
+            bottom: 10px;
+            
+            width: calc(100% + 12px);
+            height: 12px;
+            border-radius: 6px;
+            background-color: $yellow;
+            
+            // width: 170px;
+            // height: 20px;
+            // background-image: url(../images/underline.svg);
+            // background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+}
+
+.h1 {
+    @include h1();
+    @include heading-styles();
+    @include underline-text();
+}
+.lh2 {
+    @include h1();
+    @include heading-styles();
+    @include underline-text();
+}
+.h2 {
+    @include h2();
+    @include heading-styles();
+}
+.h3 {
+    @include h3();
+}
+.h4 {
+    @include h4();
+}
+.h5 {
+    @include h5();
+    @include heading-styles();
+}
+.h6 {
+    @include h6();
+}

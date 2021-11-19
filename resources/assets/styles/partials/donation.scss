@@ -1,0 +1,241 @@
+.donation-block {
+    padding: 140px 0;
+    font-size: 0;
+
+    &.less-padding {
+        min-height: 700px;
+        padding: 50px 0 100px;
+
+        .donate-section {
+            position: relative;
+            z-index: 12;
+        }
+    }
+
+    .about-section,
+    .donate-section {
+        display: inline-block;
+        width: 50%;
+        min-width: 420px;
+        vertical-align: top;
+    }
+
+    .lh2 {
+        max-width: 514px;
+    }
+
+    .desc {
+        max-width: 404px;
+        padding: 24px 0;
+
+        p:first-of-type {
+            opacity: .75;
+            margin-bottom: 24px;
+        }
+    }
+
+    .signature {
+        position: relative;
+        height: 80px;
+
+        .title {
+            font-size: 14px;
+        }
+    }
+
+        .profile-pic {
+            width: 80px;
+            margin-right: 24px;
+        }
+    
+        .signature-img {
+            position: absolute;
+            left: 84px;
+            bottom: -22px;
+            width: 130px;
+        }
+
+    .donate-section {
+        font-size: 16px;
+        max-width: 440px;
+        text-align: center;
+
+        @media #{$bp_mwmw_tablet} {
+            display: block;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .h5 {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .options {
+            margin-bottom: 32px;
+            font-size: 0;
+        }
+
+        input[type=radio] {
+            position: absolute;
+            left: -9999px;
+
+            &:checked,
+            &:focus {
+
+                + label:not(.control-label) {
+                    background-color: $primary;
+                    color: $white;
+
+                    ::-webkit-input-placeholder {
+                        color: $primary;
+                    }
+                    ::-moz-placeholder {
+                        color: $primary;
+                    }
+                    :-ms-input-placeholder {
+                        color: $primary;
+                    }
+                    :-moz-placeholder {
+                        color: $primary;
+                    }
+
+                    input[type=number] {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        label:not(.control-label) {
+            vertical-align: top;
+            display: inline-block;
+            width: 50%;
+            height: 48px;
+
+            &:not(.contains-input) {
+                padding: 16px 20px;
+
+                font-size: 16px;
+                font-weight: bold;
+                color: $placeholder;
+                text-align: center;
+                background-color: $inputBg;
+
+                cursor: pointer;
+                @include transition(all 0.15s ease);
+
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+
+            &.contains-input {
+                &:hover,
+                &:focus {
+
+                    input[type=number] {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+
+                &:hover {
+                    ::-webkit-input-placeholder {
+                        color: $white;
+                    }
+                    ::-moz-placeholder {
+                        color: $white;
+                    }
+                    :-ms-input-placeholder {
+                        color: $white;
+                    }
+                    :-moz-placeholder {
+                        color: $white;
+                    }
+                }
+
+                &:focus {
+                    ::-webkit-input-placeholder {
+                        color: $primary;
+                    }
+                    ::-moz-placeholder {
+                        color: $primary;
+                    }
+                    :-ms-input-placeholder {
+                        color: $primary;
+                    }
+                    :-moz-placeholder {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        input[type=number] {
+            width: 100%;
+            height: 48px;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $placeholder;
+            text-align: center;
+
+            border: 0;
+            border-radius: 0;
+            background: $inputBg;
+            box-shadow: none;
+            outline: none;
+            cursor: pointer;
+            @include transition(all 0.15s ease);
+
+            &:focus {
+                &::-ms-value {  
+                    outline: none !important;
+                }
+                &:not(.parsley-error) {
+                    border-color: $primary;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+            color: $darkBg;
+            margin-bottom: 24px;
+        }
+
+        .link {
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+
+    .dntplgn_form_wrapper {
+        display: none;
+    }
+}
+
+@media #{$bp_max_1080} {
+
+    .donation-block {
+        padding: 104px 20px 160px;
+
+        .pull-right {
+            float: none;
+        }
+
+        .about-section,
+        .donate-section {
+            width: 100%;
+            min-width: auto;
+        }
+
+        .donate-section {
+            margin-top: 88px;
+        }
+    }
+}

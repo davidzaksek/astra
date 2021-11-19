@@ -1,0 +1,39 @@
+#breadcrumbs {
+    color: $white;
+    margin-bottom: 40px;
+
+    span {
+        font-size: 5px;
+        color: $light;
+    }
+
+    & > span > span > a {
+        margin-left: 0;
+    }
+
+    a,
+    strong {
+        position: relative;
+        top: 2px;
+        margin: 0 10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    a {
+        &:hover,
+        &:focus {
+            color: $primary;
+        }
+    }
+
+    strong {
+        color: $white;
+    }
+}
+
+@media #{$bp_max_1080} {
+    #breadcrumbs {
+        margin-bottom: 32px;
+    }
+}
