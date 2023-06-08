@@ -82,6 +82,11 @@ input[type=submit].btn,
             bottom: $box-padding;
             left: $box-padding;
             right: 66px;
+
+            @media #{$bp_max_1080} {
+                font-size: 18px;
+                line-height: 22px;
+            }
         }
 
         &.hollow {
@@ -221,14 +226,15 @@ input[type=submit].btn,
 
     &.btn-icon {
         .instructor-ico {
-            width: 44px;
+            width: calc(100% - 60px);
             position: absolute;
-            right: 16px;
-            bottom: 34px;
+            left: 32px;
+            bottom: 100px;
 
             @media #{$bp_max_1080} {
-                bottom: auto;
-                top: 22px;
+                width: calc(100% - 55px);
+                left: 24px;
+                bottom: 84px;
             }
         }
     }
