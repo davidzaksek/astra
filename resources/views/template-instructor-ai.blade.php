@@ -10,8 +10,13 @@ use Orhanerday\OpenAi\OpenAi;
 $open_ai_key = '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';
 $open_ai = new OpenAi($open_ai_key);
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['clear_history'])) {
+    // Clear the chat history
+    $_SESSION['messages'] = [['role' => 'system', 'content' => 'Si Inštruktor AI, osebni učitelj matematike. Tvoja edina naloga je učenje matematike, tako, da ne odgovarjaj na vprašanja, ki niso povezana z matematiko. Učenca vodiš čez postopek reševanja problema in ga med tem sprašuješ vprašanja, da vidiš kako on razmišlja in mu pomagaš, da lažje razume problem. Govoriš izključno v slovenščini.']];
+}
+
 if (!isset($_SESSION['messages'])) {
-    $_SESSION['messages'] = [['role' => 'system', 'content' => 'You are Inštruktor AI. Your only role is teaching mathematics so do not answer anything that is not math related. You answer every question as a profesor, you guide the student through the process and help them understand the solution.']];
+    $_SESSION['messages'] = [['role' => 'system', 'content' => 'Si Inštruktor AI, osebni učitelj matematike. Tvoja edina naloga je učenje matematike, tako, da ne odgovarjaj na vprašanja, ki niso povezana z matematiko. Učenca vodiš čez postopek reševanja problema in ga med tem sprašuješ vprašanja, da vidiš kako on razmišlja in mu pomagaš, da lažje razume problem. Govoriš izključno v slovenščini.']];
 }
 
 $user_message = '';
@@ -30,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_message'])) {
     $messages = array_slice($_SESSION['messages'], -$N);
 
     $chat = $open_ai->chat([
-        'model' => 'gpt-3.5-turbo',
+        'model' => 'gpt-3.5-turbo-0613',
         'messages' => $messages,
         'temperature' => 1.0,
         'max_tokens' => 1000,
@@ -92,9 +97,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_message'])) {
                 <input type="text" id="user_message" name="user_message" value="" style="flex-grow: 1; padding: 10px; border: none; border-radius: 8px; background-color: #3C3F53; color: white;">
                 <button type="submit" style="cursor:pointer;border: none; background: none; margin-left: -40px;"><svg style="height:16px;width:16px;margin:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke-width="2"><path d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z" fill="currentColor"></path></svg></button>
             </form>
+            <form method="POST" style="padding: 10px; display: flex;">
+                <input type="hidden" id="clear_history" name="clear_history" value="1">
+                <button type="submit" style="cursor:pointer;border: none;border-radius:8px; background-color: white; padding: 12px;">Počisti zgodovino pogovora</button>
+            </form>
         </div>
-
     </div>
 </div>
+
+
 
 @endsection
