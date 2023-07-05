@@ -4419,5 +4419,60 @@ input[type=number] {
 .template-instructor-ai .header {
   background: var(--background-secondary, #1A1A1A);
 }
+.template-instructor-ai .header .nazaj-na-astra {
+  color: var(--text-primary-alt, #FFF);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.template-instructor-ai .header .pull-right {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+}
+.template-instructor-ai .header .prijava {
+  display: flex;
+  height: 48px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--brand-primary, #3C50E0);
+  margin-left: 40px;
+  color: var(--text-primary-alt, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.template-instructor-ai .header .brezplacni-preizkus {
+  display: flex;
+  margin-left: 16px;
+  height: 48px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-primary, #3C50E0);
+  color: var(--text-primary-alt, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.template-instructor-ai .header nav .menu-link {
+  color: #fff;
+}
 
 /*# sourceMappingURL=main.css.map */

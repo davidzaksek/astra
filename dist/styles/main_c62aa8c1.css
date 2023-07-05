@@ -4419,5 +4419,8 @@ input[type=number] {
 .template-instructor-ai .header {
   background: var(--background-secondary, #1A1A1A);
 }
+.template-instructor-ai .header nav .menu-link {
+  color: #fff;
+}
 
 /*# sourceMappingURL=main_c62aa8c1.css.map */

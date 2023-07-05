@@ -6,7 +6,7 @@
     <body id="top-scroll dark-bg" @php body_class() @endphp>
 
         @php do_action('get_header') @endphp
-        @include('partials.header')
+        @include('partials.headerAI')
 
         <main class="main dark-bg">
 
