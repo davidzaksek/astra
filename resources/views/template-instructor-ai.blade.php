@@ -58,7 +58,7 @@
             <img class="mobile-img" src="https://astra.si/wp-content/uploads/2023/07/test.png" alt="">
             <div class="line"></div>
           </div>
-          <iframe width="748" height="420" src="https://www.youtube.com/watch?v=hbQ80J03wPw">
+          <iframe class="video" src="https://www.youtube.com/watch?v=hbQ80J03wPw">
           </iframe>
           <div class="line"></div>
           </div>
@@ -74,19 +74,19 @@
         <h2>Kako deluje ASTRA AI?</h2>
         <div class="kako-deluje">
           <div class="kako-deluje-single"><div class="left"><div class="number">
-            <svg width="90" height="112" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg height="100%" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Frame 91">
             <path id="&#197;&#189;e donacija v vi&#197;&#161;ini" d="M64 112H35.1832V36.9415L16.4188 55.916L0 38.6207L39.0366 0H64V112Z" fill="#FDB300"/>
             </g>
             </svg>
           </div><div class="razlaga"><div class="ime">Vnesi matematični problem</div><div class="napis">Vnesi svoj problem v interaktivno pogovorno okno ASTRE AI, prilagojeno izključno reševanju matematičnih nalog.</div></div></div><div class="right"></div></div>
           <div class="kako-deluje-single"><div class="left"><div class="number">
-            <svg width="90" height="112" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg height="100%" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="&#197;&#189;e donacija v vi&#197;&#161;ini" d="M90 112H3.63303V89.8316C51.3578 55.2555 60.2752 47.6455 60.2752 36.5613C60.2752 29.1167 53.1743 25.1462 45.0826 25.1462C32.8624 25.1462 23.6147 29.7784 15.6881 37.223L0 18.3634C11.7248 5.45938 29.2294 0 44.5872 0C70.5138 0 89.1743 14.5583 89.1743 36.5613C89.1743 53.6012 77.1193 67.9941 49.7064 87.1846H90V112Z" fill="#FDB300"/>
             </svg>
           </div><div class="razlaga"><div class="ime">Reši problem, korak za korakom</div><div class="napis">ASTRA AI ti ne bo podal zgolj odgovora na tvoj problem, temveč te bo vodil skozi proces reševanja matematičnih nalog, korak za korakom.</div></div></div><div class="right"></div></div>
           <div class="kako-deluje-single"><div class="left"><div class="number">
-            <svg width="90" height="112" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg height="100%" viewBox="0 0 90 112" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="&#197;&#189;e donacija v vi&#197;&#161;ini" d="M45 112C24.1304 112 8.6413 104.685 0 94.9318L14.1848 75.9129C22.1739 83.553 34.4022 87.2917 43.8587 87.2917C55.9239 87.2917 62.1196 82.7402 62.1196 76.7257C62.1196 70.5486 57.5543 67.4601 42.7174 67.4601C37.9891 67.4601 29.6739 67.6226 28.0435 67.7852V42.9144C30.163 43.0769 38.6413 43.0769 42.7174 43.0769C53.9674 43.0769 60.3261 40.3135 60.3261 34.6241C60.3261 27.7968 52.5 24.7083 42.0652 24.7083C32.1196 24.7083 22.663 28.2845 15 35.1118L1.46739 17.5559C10.7609 7.31495 24.9457 0 45 0C72.7174 0 88.2065 11.8665 88.2065 29.7475C88.2065 42.4267 77.2826 52.0174 64.4022 54.1306C75.9783 55.2685 90 64.209 90 79.8142C90 98.8331 72.0652 112 45 112Z" fill="#FDB300"/>
             </svg>
           </div><div class="razlaga"><div class="ime">Postani samostojen pri reševanju</div><div class="napis">Skozi čas boš razvil trdne temelje in postopoma postal samostojen pri reševanju matematičnih problemov, neodvisen od ASTRE AI.</div></div></div><div class="right"></div></div>
