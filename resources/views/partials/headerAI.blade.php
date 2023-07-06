@@ -15,6 +15,19 @@
                 </div>
 
     </div>
-
+<style>
+    .bg-lines::before{
+        left:calc(50% - 375px);
+    }
+    .m-lines::before {
+    right: calc(50% - 375px);
+    }
+    .bg-lines::after{
+        display:none;
+    }
+    .m-lines::after {
+        display:none;
+    }
+</style>
     <div class="bg-lines"><div class="m-lines"></div></div>
 </header>

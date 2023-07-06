@@ -4130,6 +4130,7 @@ input[type=number] {
   flex-direction: column;
   align-items: center;
   padding-top: 64px;
+  z-index: 11;
 }
 .instructor-ai .narrow {
   max-width: 748px;
@@ -4171,6 +4172,7 @@ input[type=number] {
   font-style: normal;
   font-weight: 800;
   line-height: 72px;
+  margin-bottom: 16px;
 }
 .instructor-ai h1 .yellow {
   color: #FDB300;
@@ -4183,6 +4185,9 @@ input[type=number] {
   font-weight: 400;
   line-height: 36px;
   margin-bottom: 32px;
+}
+.instructor-ai .mobile-img {
+  height: 640px;
 }
 .instructor-ai .preizkusi-div {
   display: flex;
@@ -4339,10 +4344,12 @@ input[type=number] {
 }
 
 .instruktor-white {
-  padding: 80px 0;
   background-color: #fff;
 }
 .instruktor-white .inner-child {
+  padding: 80px 0;
+  background-color: #fff;
+  z-index: 12;
   display: flex;
   max-width: 1064px;
   flex-direction: column;
@@ -4473,6 +4480,321 @@ input[type=number] {
 }
 .template-instructor-ai .header nav .menu-link {
   color: #fff;
+}
+
+.instructor-ai-bottom {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-bottom: 104px;
+}
+.instructor-ai-bottom .inner-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+.instructor-ai-bottom .narrow {
+  max-width: 748px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 104px;
+}
+.instructor-ai-bottom .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .separator {
+  width: 1px;
+  height: 16px;
+  background: #F0F5FC;
+}
+.instructor-ai-bottom h2 {
+  color: #FFF;
+  text-align: center;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px;
+}
+.instructor-ai-bottom h2 .yellow {
+  color: #FDB300;
+}
+.instructor-ai-bottom .toggle {
+  border: 1px solid var(--brand-primary, #3C50E0);
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-secondary-alt, #D9D9D9);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+.instructor-ai-bottom .toggle .mesecno, .instructor-ai-bottom .toggle .letno {
+  display: flex;
+  min-width: 184px;
+  height: 48px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.instructor-ai-bottom .toggle .mesecno.active, .instructor-ai-bottom .toggle .letno.active {
+  background: var(--brand-primary, #3C50E0);
+  color: #fff; /* adjust this to your preferred active text color */
+}
+.instructor-ai-bottom .toggle .light {
+  font-weight: 400;
+}
+.instructor-ai-bottom .subscription-info {
+  display: none !important;
+}
+.instructor-ai-bottom .subscription-info.active {
+  display: flex !important;
+}
+.instructor-ai-bottom .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.instructor-ai-bottom .options .inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.instructor-ai-bottom .options .inner .left {
+  display: flex;
+  width: 354px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  border: 2px solid var(--brand-primary, #3C50E0);
+  background: var(--background-primary, #FFF);
+}
+.instructor-ai-bottom .options .inner .left .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .left .top .program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .left .top .program .name {
+  color: var(--brand-primary, #3C50E0);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instructor-ai-bottom .options .inner .left .top .program .bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instructor-ai-bottom .options .inner .left .top .program .price {
+  color: var(--text-primary, #15385B);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px;
+}
+.instructor-ai-bottom .options .inner .left .top .program .price .smaller {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px;
+}
+.instructor-ai-bottom .options .inner .left .top .program .description {
+  color: var(--text-secondary, #506A84);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.instructor-ai-bottom .options .inner .left .top .info {
+  display: flex;
+  height: 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .left .top .info .single {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--text-primary, #15385B);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.instructor-ai-bottom .options .inner .left .top .info .single svg {
+  min-width: fit-content;
+}
+.instructor-ai-bottom .options .inner .left .button {
+  display: flex;
+  height: 48px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border: 1px solid var(--brand-primary, #3C50E0);
+  color: var(--text-tertiary, #1A1A1A);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instructor-ai-bottom .options .inner .right {
+  display: flex;
+  width: 354px;
+  padding: 32px 32px 16px 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: var(--brand-primary, #3C50E0);
+}
+.instructor-ai-bottom .options .inner .right .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .right .top .program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .right .top .program .name {
+  color: var(--brand-primary, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instructor-ai-bottom .options .inner .right .top .program .bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instructor-ai-bottom .options .inner .right .top .program .price {
+  color: var(--text-primary, #fff);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 48px;
+}
+.instructor-ai-bottom .options .inner .right .top .program .price .smaller {
+  color: var(--text-primary-alt, #FFF);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px;
+}
+.instructor-ai-bottom .options .inner .right .top .program .description {
+  color: var(--text-secondary, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.instructor-ai-bottom .options .inner .right .top .program .description .precrtano {
+  text-decoration: line-through;
+}
+.instructor-ai-bottom .options .inner .right .top .info {
+  display: flex;
+  height: 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .right .top .info .single {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--text-primary, #fff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.instructor-ai-bottom .options .inner .right .top .info .single svg {
+  min-width: fit-content;
+}
+.instructor-ai-bottom .options .inner .right .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+.instructor-ai-bottom .options .inner .right .bottom .pisi-nam {
+  color: var(--text-primary-alt, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+.instructor-ai-bottom .options .inner .right .button {
+  display: flex;
+  height: 48px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  background: var(--brand-secondary, #FDB300);
+  color: var(--text-tertiary, #1A1A1A);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instructor-ai-bottom .drobni-tisk {
+  color: var(--text-secondary-alt, #D9D9D9);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
