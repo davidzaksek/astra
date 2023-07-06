@@ -98,21 +98,32 @@
         <div class="narrow">
           <div class="centered">
             <h2>Vstopi v <span class="yellow">novo dobo učenja</span> z ASTRA AI</h2>
-            <script>$(document).ready(function() {
-    $('.toggle > div').click(function() {
-        // Remove active class from all elements
-        $('.toggle > div').removeClass('active');
-        $('.subscription-info').removeClass('active');
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    var toggles = document.querySelectorAll('.toggle > div');
+    var mesecnoInfo = document.querySelector('#mesecno-info');
+    var letnoInfo = document.querySelector('#letno-info');
 
-        // Add active class to the clicked element
-        $(this).addClass('active');
+    toggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            // Remove active class from all elements
+            toggles.forEach(function(t) {
+                t.classList.remove('active');
+            });
 
-        // Show the corresponding info
-        if ($(this).hasClass('mesecno')) {
-            $('#mesecno-info').addClass('active');
-        } else {
-            $('#letno-info').addClass('active');
-        }
+            mesecnoInfo.classList.remove('active');
+            letnoInfo.classList.remove('active');
+
+            // Add active class to the clicked element
+            this.classList.add('active');
+
+            // Show the corresponding info
+            if (this.classList.contains('mesecno')) {
+                mesecnoInfo.classList.add('active');
+            } else {
+                letnoInfo.classList.add('active');
+            }
+        });
     });
 });
 </script>
