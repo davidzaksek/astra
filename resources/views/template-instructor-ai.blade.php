@@ -50,7 +50,7 @@
             </div>
             <div class="preizkusi-div">
             <div class="preizkusi-text">Preizkusi brezplačno:</div>
-            <div class="preizkusi-buttons"><a href="" class="nadaljuj-z-googlom">nadaljuj z google računom</a>ali<a href="" class="nadaljuj-z-emailom">nadaljuj z emailom</a></div>
+            <div class="preizkusi-buttons"><a href="" class="nadaljuj-z-googlom">@include('icons.google')nadaljuj z google računom</a>ali<a href="" class="nadaljuj-z-emailom">nadaljuj z emailom</a></div>
             </div>
           </div>
           <div class="image-frame">
@@ -176,7 +176,7 @@
                       <g id="done_FILL0_wght400_GRAD0_opsz48 1">
                       <path id="Vector" d="M9.6 17.75L4 12.15L5.075 11.075L9.6 15.6L19.2 6L20.275 7.075L9.6 17.75Z" fill="#FDB300"/>
                       </g>
-                      </svg>2000 izmenjav* / mesec</div>
+                      </svg>2000 izmenjav* / mesec <div class="info-icon">@include('icons.info') <div class="hover-tooltip">Ena "izmenjava" predstavlja eno vprašanje/sporočilo in pripadajoč odgovor AI inštruktorja. Neporabljene “izmenjave” se ne prenašajo v naslednji mesec.</div></div></div>
                       <div class="single"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="done_FILL0_wght400_GRAD0_opsz48 1">
                       <path id="Vector" d="M9.6 17.75L4 12.15L5.075 11.075L9.6 15.6L19.2 6L20.275 7.075L9.6 17.75Z" fill="#FDB300"/>
@@ -247,7 +247,7 @@
                       <g id="done_FILL0_wght400_GRAD0_opsz48 1">
                       <path id="Vector" d="M9.6 17.75L4 12.15L5.075 11.075L9.6 15.6L19.2 6L20.275 7.075L9.6 17.75Z" fill="#FDB300"/>
                       </g>
-                      </svg>2000 izmenjav* / mesec</div>
+                      </svg>2000 izmenjav* / mesec <div class="info-icon">@include('icons.info') <div class="hover-tooltip">Ena "izmenjava" predstavlja eno vprašanje/sporočilo in pripadajoč odgovor AI inštruktorja. Neporabljene “izmenjave” se ne prenašajo v naslednji mesec.</div></div></div>
                       <div class="single"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="done_FILL0_wght400_GRAD0_opsz48 1">
                       <path id="Vector" d="M9.6 17.75L4 12.15L5.075 11.075L9.6 15.6L19.2 6L20.275 7.075L9.6 17.75Z" fill="#FDB300"/>

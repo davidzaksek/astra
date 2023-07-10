@@ -4215,6 +4215,7 @@ input[type=number] {
 }
 .instructor-ai .preizkusi-div .preizkusi-buttons .nadaljuj-z-googlom {
   display: flex;
+  min-width: fit-content;
   height: 64px;
   padding: 16px 32px;
   justify-content: center;
@@ -4659,6 +4660,11 @@ input[type=number] {
 .instructor-ai-bottom .options .inner .left .top .info .single svg {
   min-width: fit-content;
 }
+.instructor-ai-bottom .options .inner .left .top .info .single .info-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .instructor-ai-bottom .options .inner .left .button {
   display: flex;
   height: 48px;
@@ -4761,6 +4767,33 @@ input[type=number] {
 }
 .instructor-ai-bottom .options .inner .right .top .info .single svg {
   min-width: fit-content;
+}
+.instructor-ai-bottom .options .inner .right .top .info .single .info-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.instructor-ai-bottom .options .inner .right .top .info .single .hover-tooltip {
+  color: var(--text-tertiary, #1A1A1A);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  width: 240px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--background-primary, #FFF);
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: calc(100% + 7px);
+  display: none;
+}
+.instructor-ai-bottom .options .inner .right .top .info .single .info-icon:hover .hover-tooltip {
+  display: flex;
 }
 .instructor-ai-bottom .options .inner .right .bottom {
   display: flex;

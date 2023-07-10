@@ -105,6 +105,7 @@
             align-self: stretch;
             .nadaljuj-z-googlom{
                 display: flex;
+                min-width:fit-content;
                 height: 64px;
                 padding: 16px 32px;
                 justify-content: center;
@@ -595,6 +596,12 @@
                             svg{
                                 min-width: fit-content;
                             }
+
+                            .info-icon{
+                                height:100%;
+                                display:flex;
+                                align-items: center;
+                            }
                         }
                     }
                 }
@@ -710,6 +717,36 @@
 
                             svg{
                                 min-width: fit-content;
+                            }
+
+                            .info-icon{
+                                height:100%;
+                                display:flex;
+                                align-items: center;
+                                position:relative;
+                                cursor:pointer;
+                            }
+
+                            .hover-tooltip{
+                                color: var(--text-tertiary, #1A1A1A);
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 16px;
+                                width: 240px;
+                                padding: 8px 12px;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 8px;
+                                background: var(--background-primary, #FFF);
+                                position:absolute;
+                                bottom:calc(100% + 3px);
+                                left:calc(100% + 7px);
+                                display:none;
+                            }
+
+                            .info-icon:hover .hover-tooltip{
+                                display:flex;
                             }
                         }
                     }
