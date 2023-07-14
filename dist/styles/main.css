@@ -462,16 +462,140 @@ input[type=submit].btn.blue,
 .btn.blue {
   background-color: #3C50E0;
 }
+input[type=submit].btn.blue .bg-icon,
+.wp-block-button__link.blue .bg-icon,
+.btn.blue .bg-icon {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 170px;
+  height: 162px;
+  background-image: url("https://astra.si/wp-content/uploads/2023/07/Astra-AI-beta-2.png");
+  background-size: cover;
+}
+input[type=submit].btn.astra-ai,
+.wp-block-button__link.astra-ai,
+.btn.astra-ai {
+  color: var(--text-primary-alt, #FFF);
+  background: var(--brand-primary, #3C50E0);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+input[type=submit].btn.astra-ai .beta,
+.wp-block-button__link.astra-ai .beta,
+.btn.astra-ai .beta {
+  border: 1px solid var(--background-primary, #FFF);
+  display: flex;
+  width: 50px;
+  height: 20px;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: absolute;
+  top: 27px;
+  left: 24px;
+}
+input[type=submit].btn.astra-ai .full-arrow,
+.wp-block-button__link.astra-ai .full-arrow,
+.btn.astra-ai .full-arrow {
+  right: 24px;
+  left: auto;
+}
+input[type=submit].btn.astra-ai .inner-div,
+.wp-block-button__link.astra-ai .inner-div,
+.btn.astra-ai .inner-div {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+}
+input[type=submit].btn.astra-ai .inner-div .text,
+.wp-block-button__link.astra-ai .inner-div .text,
+.btn.astra-ai .inner-div .text {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+}
+input[type=submit].btn.astra-ai .inner-div .instructor-ico,
+.wp-block-button__link.astra-ai .inner-div .instructor-ico,
+.btn.astra-ai .inner-div .instructor-ico {
+  margin-bottom: 2.4px;
+  position: relative !important;
+  left: 0 !important;
+  width: fit-content !important;
+  bottom: 0 !important;
+  height: 25px;
+}
 input[type=submit].btn.yellow,
 .wp-block-button__link.yellow,
 .btn.yellow {
   background-color: #FDB300;
   color: #15385B;
 }
+input[type=submit].btn.ai .text,
+.wp-block-button__link.ai .text,
+.btn.ai .text {
+  color: var(--text-primary, #15385B);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+input[type=submit].btn.ai .text .teme,
+.wp-block-button__link.ai .text .teme,
+.btn.ai .text .teme {
+  color: var(--text-primary, #15385B);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px; /* 120% */
+}
 input[type=submit].btn.dark,
 .wp-block-button__link.dark,
 .btn.dark {
   background-color: #1A1A1A;
+}
+input[type=submit].btn.btn-horizont,
+.wp-block-button__link.btn-horizont,
+.btn.btn-horizont {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 49px 24px 24px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 440px;
+  height: 110px;
+  background: var(--contrast-secondary, #F0F5FC);
+}
+input[type=submit].btn.btn-horizont .full-arrow,
+.wp-block-button__link.btn-horizont .full-arrow,
+.btn.btn-horizont .full-arrow {
+  right: 24px;
+  left: auto;
+}
+input[type=submit].btn.btn-horizont .text,
+.wp-block-button__link.btn-horizont .text,
+.btn.btn-horizont .text {
+  color: var(--text-tertiary, #1A1A1A);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+input[type=submit].btn.btn-horizont img,
+.wp-block-button__link.btn-horizont img,
+.btn.btn-horizont img {
+  height: 40px;
+  width: auto;
 }
 input[type=submit].btn.light,
 .wp-block-button__link.light,
@@ -3006,6 +3130,111 @@ input[type=number] {
     margin-top: 88px;
   }
 }
+.instruktor-block {
+  padding: 80px 0 62px;
+}
+.instruktor-block .inner-child {
+  display: flex;
+  flex-direction: row;
+}
+.instruktor-block .inner-child .about-section {
+  width: 100%;
+}
+.instruktor-block .inner-child .about-section .astra-logo {
+  height: 80px;
+  width: auto;
+}
+.instruktor-block .inner-child .about-section .description {
+  color: var(--text-primary, #15385B);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 150% */
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.instruktor-block .inner-child .about-section .bullet-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.instruktor-block .inner-child .about-section .bullet-single {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.instruktor-block .inner-child .about-section .bullet-single .checkmark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.instruktor-block .inner-child .about-section .bullet-single .text {
+  color: var(--text-primary, #15385B);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.instruktor-block .inner-child .about-section .buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.instruktor-block .inner-child .about-section .buttons .blue-btn {
+  display: flex;
+  height: 64px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-primary, #3C50E0);
+  color: var(--text-primary-alt, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instruktor-block .inner-child .about-section .buttons .white-btn {
+  display: flex;
+  height: 64px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--brand-primary, #3C50E0);
+  color: var(--text-tertiary, #1A1A1A);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.instruktor-block .inner-child .about-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.instruktor-block .inner-child .about-right img {
+  height: 520px;
+  width: auto;
+}
+
+@media only screen and (max-width: 1114px) {
+  .instruktor-block .inner-child {
+    flex-direction: column;
+  }
+  .instruktor-block .inner-child .about-section {
+    margin-bottom: 48px;
+  }
+}
 .topics-section .btn.box {
   position: absolute;
   top: 50px;
@@ -4192,6 +4421,7 @@ input[type=number] {
 }
 .instructor-ai .mobile-img {
   height: 640px;
+  width: auto;
 }
 .instructor-ai .preizkusi-div {
   display: flex;
@@ -4433,6 +4663,12 @@ input[type=number] {
 .template-instructor-ai .header {
   background: var(--background-secondary, #1A1A1A);
 }
+.template-instructor-ai .header .site-logo {
+  width: auto;
+}
+.template-instructor-ai .header .site-logo img {
+  width: auto;
+}
 .template-instructor-ai .header .nazaj-na-astra {
   color: var(--text-primary-alt, #FFF);
   font-size: 12px;
@@ -4659,6 +4895,7 @@ input[type=number] {
 }
 .instructor-ai-bottom .options .inner .left .top .info .single svg {
   min-width: fit-content;
+  width: auto;
 }
 .instructor-ai-bottom .options .inner .left .top .info .single .info-icon {
   height: 100%;
@@ -4667,6 +4904,7 @@ input[type=number] {
 }
 .instructor-ai-bottom .options .inner .left .button {
   display: flex;
+  cursor: pointer;
   height: 48px;
   padding: 16px 32px;
   justify-content: center;
@@ -4767,6 +5005,7 @@ input[type=number] {
 }
 .instructor-ai-bottom .options .inner .right .top .info .single svg {
   min-width: fit-content;
+  width: auto;
 }
 .instructor-ai-bottom .options .inner .right .top .info .single .info-icon {
   height: 100%;
@@ -4813,6 +5052,7 @@ input[type=number] {
 }
 .instructor-ai-bottom .options .inner .right .button {
   display: flex;
+  cursor: pointer;
   height: 48px;
   padding: 16px 32px;
   justify-content: center;
@@ -4939,6 +5179,12 @@ input[type=number] {
   }
   .template-instructor-ai .header .nazaj-na-astra {
     display: none;
+  }
+  .template-instructor-ai .header .site-logo {
+    width: auto;
+  }
+  .template-instructor-ai .header .site-logo img {
+    width: auto;
   }
   .template-instructor-ai .header .brezplacni-preizkus {
     display: none;

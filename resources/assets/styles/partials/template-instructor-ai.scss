@@ -80,6 +80,7 @@
 
     .mobile-img{
         height:640px;
+        width:auto;
     }
     
     .preizkusi-div{
@@ -343,6 +344,14 @@
 .template-instructor-ai .header{
     background: var(--background-secondary, #1A1A1A);
 
+    .site-logo{
+        width:auto;
+
+        img{
+            width:auto;
+        }
+    }
+
     .nazaj-na-astra{
         color: var(--text-primary-alt, #FFF);
         font-size: 12px;
@@ -595,6 +604,7 @@
 
                             svg{
                                 min-width: fit-content;
+                                width:auto;
                             }
 
                             .info-icon{
@@ -608,6 +618,7 @@
 
                 .button{
                     display: flex;
+                    cursor:pointer;
                     height: 48px;
                     padding: 16px 32px;
                     justify-content: center;
@@ -717,6 +728,7 @@
 
                             svg{
                                 min-width: fit-content;
+                                width:auto;
                             }
 
                             .info-icon{
@@ -772,6 +784,7 @@
 
                 .button{
                     display: flex;
+                    cursor:pointer;
                     height: 48px;
                     padding: 16px 32px;
                     justify-content: center;
@@ -917,6 +930,14 @@
     .template-instructor-ai .header{
         .nazaj-na-astra{
             display:none;
+        }
+
+        .site-logo{
+            width:auto;
+
+            img{
+                width:auto;
+            }
         }
 
         .brezplacni-preizkus{
