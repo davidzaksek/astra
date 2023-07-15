@@ -4462,6 +4462,9 @@ input[type=number] {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.instructor-ai .preizkusi-div .preizkusi-buttons .nadaljuj-z-googlom:hover {
+  background-color: #2a38a0;
+}
 .instructor-ai .preizkusi-div .preizkusi-buttons .nadaljuj-z-emailom {
   display: flex;
   height: 64px;
@@ -4479,6 +4482,9 @@ input[type=number] {
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.instructor-ai .preizkusi-div .preizkusi-buttons .nadaljuj-z-emailom:hover {
+  background: var(--brand-primary, #3C50E0);
 }
 .instructor-ai .image-frame {
   display: flex;
@@ -4703,6 +4709,9 @@ input[type=number] {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.template-instructor-ai .header .prijava:hover {
+  background: var(--brand-primary, #3C50E0);
+}
 .template-instructor-ai .header .brezplacni-preizkus {
   display: flex;
   margin-left: 16px;
@@ -4720,6 +4729,9 @@ input[type=number] {
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.template-instructor-ai .header .brezplacni-preizkus:hover {
+  background-color: #2a38a0;
 }
 .template-instructor-ai .header nav .menu-link {
   color: #fff;
@@ -4788,6 +4800,9 @@ input[type=number] {
   gap: 8px;
   cursor: pointer;
   user-select: none;
+}
+.instructor-ai-bottom .toggle .mesecno:hover, .instructor-ai-bottom .toggle .letno:hover {
+  background: var(--brand-primary, #3C50E0);
 }
 .instructor-ai-bottom .toggle .mesecno.active, .instructor-ai-bottom .toggle .letno.active {
   background: var(--brand-primary, #3C50E0);
@@ -4921,6 +4936,10 @@ input[type=number] {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.instructor-ai-bottom .options .inner .left .button:hover {
+  background: var(--brand-primary, #3C50E0);
+  color: #fff;
+}
 .instructor-ai-bottom .options .inner .right {
   display: flex;
   width: 354px;
@@ -5049,6 +5068,9 @@ input[type=number] {
   font-weight: 600;
   line-height: 20px;
   text-decoration-line: underline;
+}
+.instructor-ai-bottom .options .inner .right .bottom .pisi-nam:hover {
+  text-decoration-line: none;
 }
 .instructor-ai-bottom .options .inner .right .button {
   display: flex;

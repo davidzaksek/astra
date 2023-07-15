@@ -122,6 +122,10 @@
                 line-height: 16px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
+
+                &:hover{
+                    background-color: #2a38a0;
+                }
             }
             .nadaljuj-z-emailom{
                 display: flex;
@@ -140,6 +144,9 @@
                 line-height: 16px;
                 letter-spacing: 1px;
                 text-transform: uppercase;
+                &:hover{
+                    background: var(--brand-primary, #3C50E0);
+                }
             }
         }
 
@@ -387,6 +394,9 @@
         line-height: 16px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        &:hover{
+            background: var(--brand-primary, #3C50E0);
+        }
     }
 
     .brezplacni-preizkus{
@@ -406,6 +416,9 @@
         line-height: 16px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        &:hover{
+            background-color: #2a38a0;
+        }
     }
 
     nav .menu-link{
@@ -484,6 +497,9 @@
         gap: 8px;
         cursor: pointer;
         user-select: none;
+        &:hover{
+            background: var(--brand-primary, #3C50E0);
+        }
     }
     
     .toggle .mesecno.active, .toggle .letno.active {
@@ -634,6 +650,10 @@
                     line-height: 16px;
                     letter-spacing: 1px;
                     text-transform: uppercase;
+                    &:hover{
+                        background: var(--brand-primary, #3C50E0);
+                        color:#fff;
+                    }
                 }
             }
 
@@ -779,6 +799,9 @@
                         font-weight: 600;
                         line-height: 20px;
                         text-decoration-line: underline;
+                        &:hover{
+                            text-decoration-line: none;
+                        }
                     }
                 }
 
