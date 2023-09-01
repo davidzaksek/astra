@@ -24,20 +24,27 @@
 
                 <div class="pull-right">
                     <?php if ( $scroll_link ) { ?>
-                        <a class="btn box yellow" href="<?php echo $scroll_link['url']; ?>" target="<?php echo $scroll_link['target']; ?>">
+                        <a class="btn box yellow ai" href="<?php echo $scroll_link['url']; ?>" target="<?php echo $scroll_link['target']; ?>">
                             <span class="full-arrow is-bottom"></span>
-                            <span class="text"><?php echo $scroll_link['title']; ?></span>
+                            <span class="text"><div class="teme">Teme</div>Poišči svojo snov</span>
                         </a>
                     <?php } ?>
                     
                     <?php if ( $page_link ) { ?>
-                        <a class="btn box btn-icon dark" href="<?php echo $page_link['url']; ?>" target="<?php echo $page_link['target']; ?>">
+                        <a class="btn box btn-icon blue astra-ai" href="https://astra.si/ai">
+                            <div class="beta">@include('icons.beta')</div>
+                            <div class="bg-icon"></div>
                             <span class="full-arrow is-top-right white"></span>
-                            <span class="text"><?php echo $page_link['title']; ?></span>
-                            <?php $page_link_icon = get_sub_field( 'page_link_icon' ); ?>
-                            <?php if ( $page_link_icon ) { ?>
-                                <img class="instructor-ico" src="<?php echo $page_link_icon['url']; ?>" alt="<?php echo $page_link_icon['alt']; ?>" />
-                            <?php } ?>
+                            <div class="inner-div">
+                                <img class="instructor-ico" src="https://astra.si/wp-content/uploads/2023/07/Asset-1-4.png" alt="" />
+                                <span class="text">Osebni inštruktor na voljo 24/7</span>
+                            </div>
+                        </a>
+
+                        <a class="btn box btn-horizont" href="<?php echo $page_link['url']; ?>" target="<?php echo $page_link['target']; ?>">
+                            <img src="https://astra.si/wp-content/uploads/2023/07/Horizont_astra_matura-1.png" alt="">
+                            <div class="text">Najdi inštruktorja</div>
+                            <span class="full-arrow is-top-right dark"></span>
                         </a>
                     <?php } ?>
                 </div>

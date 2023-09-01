@@ -109,9 +109,8 @@
 </div>
 
 @php if ( $instructor_link ): @endphp
-	<a class="btn box blue btn-icon hide-m" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
+	<a class="btn box dark horizont btn-icon hide-m" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
         <span class="full-arrow is-top-right white"></span>
-        <span class="text"><?php echo $instructor_link['title']; ?></span>
         <?php $instructor_icon = get_field( 'instructor_icon', 'option' ); ?>
         <?php if ( $instructor_icon ) { ?>
         <img class="instructor-ico" src="<?php echo $instructor_icon['url']; ?>" alt="<?php echo $instructor_icon['alt']; ?>" />

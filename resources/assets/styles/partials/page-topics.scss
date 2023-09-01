@@ -1,9 +1,31 @@
 .topics-section {
     
-    .btn.box {
-        position: absolute;
-        top: 50px;
-        right: 1px;
+    .btn.box.dark {
+        bottom: 0;
+        right: 0;
+        height:110px;
+        background-color: #000;
+
+        .instructor-ico{
+            bottom:24px;
+            left:24px;
+        }
+
+        .full-arrow{
+            left: auto;
+            right:24px;
+        }
+    }
+
+    .btn.box.blue {
+        overflow:hidden;
+    }
+
+    .topic-buttons{
+        display:flex;
+        justify-content:flex-end;
+        align-items: flex-end;
+        margin-top:-108px;
     }
 
     $chapter-margin: 16px;
@@ -214,6 +236,10 @@
             .text {
                 max-width: 160px;
             }
+        }
+
+        .topic-buttons{
+            display:none;
         }
 
         .chapters {

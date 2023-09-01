@@ -1,0 +1,155 @@
+.instruktor-block{
+    padding:80px 0 62px;
+    .inner-child{
+        display:flex;
+        flex-direction:row;
+        z-index:11;
+    .about-section{
+        width:100%;
+        .astra-logo{
+            height:80px;
+            width: auto;
+        }
+
+        .description{
+            color: var(--text-primary, #15385B);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 36px; /* 150% */
+            margin-top:16px;
+            margin-bottom:24px;
+        }
+
+        .bullet-list{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom:40px;
+        }
+
+        .bullet-single{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .checkmark{
+                width: 32px;
+                height: 32px;
+                flex-shrink: 0;
+            }
+
+            .text{
+                color: var(--text-primary, #15385B);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px; /* 150% */
+            }
+        }
+
+        .buttons{
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+
+            .blue-btn{
+                display: flex;
+                height: 64px;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                background: var(--brand-primary, #3C50E0);
+                color: var(--text-primary-alt, #FFF);
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px; /* 114.286% */
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                &:hover{
+                    background-color: #2a38a0;
+                }
+            }
+
+
+            .white-btn{
+                display: flex;
+                height: 64px;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border: 1px solid var(--brand-primary, #3C50E0);
+                color: var(--text-tertiary, #1A1A1A);
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px; /* 114.286% */
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                &:hover{
+                    background-color: $primary;
+                    color:#fff;
+                }
+            }
+        }
+    }
+    .about-right{
+        width:100%;
+        display:flex;
+        justify-content:center;
+
+        img{
+            height:520px;
+            width:auto;
+        }
+    }
+}
+}
+
+@media #{$bp_max_1080} {
+
+    .instruktor-block {
+        padding:20px;
+
+        .inner-child{
+            flex-direction:column-reverse;
+
+            .about-right{
+                margin-bottom:64px;
+
+                img{
+                    aspect-ratio:0.63;
+                    max-height: 520px;
+                    height: auto;
+                }
+            }
+
+            .about-section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .bullet-list{
+                    width:100%;
+                }
+
+                .buttons{
+                    flex-direction:column;
+
+                    a{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}

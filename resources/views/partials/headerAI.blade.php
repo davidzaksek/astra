@@ -10,8 +10,8 @@
                 <div class="pull-right">
 
                     <a class="nazaj-na-astra" href="https://astra.si/">Nazaj na astra.si</a>
-                    <a class="prijava" href="">Prijava</a>
-                    <a href="" class="brezplacni-preizkus">Preizkusi brezplačno</a>
+                    <a class="prijava" href="https://ai.astra.si">Prijava</a>
+                    <a href="https://ai.astra.si" class="brezplacni-preizkus">Preizkusi brezplačno</a>
                 </div>
 
     </div>

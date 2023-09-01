@@ -13,7 +13,7 @@
             @yield('content')
 
             @php if (!in_array('page-doniraj-data', get_body_class()) && !in_array('page-zahvala-data', get_body_class()) ) : @endphp
-                @include('partials.custom.donate-global')
+                @include('partials.custom.instruktor-global')
             @php endif; @endphp
 
         </main>

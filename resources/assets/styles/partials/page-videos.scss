@@ -7,6 +7,30 @@
     
         .btn.box.blue {
             margin-top: 20px;
+            overflow:hidden;
+        }
+
+        .btn.box.dark {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            height:110px;
+            background-color: #000;
+    
+            .instructor-ico{
+                bottom:24px;
+                left:24px;
+            }
+    
+            .full-arrow{
+                left: auto;
+                right:24px;
+            }
+        }
+
+        .btn-wrap{
+            display:flex;
+            flex-direction:column;
         }
 
 

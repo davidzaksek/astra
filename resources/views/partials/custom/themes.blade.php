@@ -25,16 +25,15 @@
         <?php } ?>
     </div>
 
-    <?php $link = get_field( 'link' ); ?>
-	<?php if ( $link ) { ?>
-        <a class="btn box blue btn-icon hide-m" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-            <span class="full-arrow is-top-right white"></span>
-            <span class="text"><?php echo $link['title']; ?></span>
-            <?php $link_icon = get_field( 'link_icon' ); ?>
-            <?php if ( $link_icon ) { ?>
-                <img class="instructor-ico" src="<?php echo $link_icon['url']; ?>" alt="<?php echo $link_icon['alt']; ?>" />
-            <?php } ?>
-        </a>
+    <?php $instructor_link = get_field( 'instructor_link', 'option' ); ?>
+	<?php if ( $instructor_link ) { ?>
+        <a class="btn box dark horizont btn-icon hide-m" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
+        <span class="full-arrow is-top-right white"></span>
+        <?php $instructor_icon = get_field( 'instructor_icon', 'option' ); ?>
+        <?php if ( $instructor_icon ) { ?>
+        <img class="instructor-ico" src="<?php echo $instructor_icon['url']; ?>" alt="<?php echo $instructor_icon['alt']; ?>" />
+        <?php } ?>
+    </a>
 	<?php } ?>
 
 </div>

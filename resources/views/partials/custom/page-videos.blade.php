@@ -139,14 +139,24 @@
     </div>
 
     @php if ( $instructor_link ): @endphp
-        <a class="btn box blue btn-icon hide-m" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
+    <div class="btn-wrap">
+        <a class="btn box btn-icon blue astra-ai" href="https://astra.si/ai">
+            <div class="beta">@include('icons.beta')</div>
+            <div class="bg-icon"></div>
             <span class="full-arrow is-top-right white"></span>
-            <span class="text"><?php echo $instructor_link['title']; ?></span>
+            <div class="inner-div">
+                <img class="instructor-ico" src="https://astra.si/wp-content/uploads/2023/07/Asset-1-4.png" alt="" />
+                <span class="text">Osebni inštruktor na voljo 24/7</span>
+            </div>
+        </a>
+        <a class="btn box dark horizont btn-icon hide-m" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
+            <span class="full-arrow is-top-right white"></span>
             <?php $instructor_icon = get_field( 'instructor_icon', 'option' ); ?>
             <?php if ( $instructor_icon ) { ?>
             <img class="instructor-ico" src="<?php echo $instructor_icon['url']; ?>" alt="<?php echo $instructor_icon['alt']; ?>" />
             <?php } ?>
         </a>
+    </div>
         <a class="btn box blue small hide-d" href="<?php echo $instructor_link['url']; ?>" target="<?php echo $instructor_link['target']; ?>">
             <span class="full-arrow is-top-right white"></span>
             <span class="text"><?php echo $instructor_link['title']; ?></span>

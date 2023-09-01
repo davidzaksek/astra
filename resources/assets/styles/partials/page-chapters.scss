@@ -5,11 +5,24 @@
         margin: 32px 0;
     }
     
-    .btn.box.blue {
+    .btn.box.dark {
         position: absolute;
-        bottom: -116px;
+        bottom: -80px;
         right: 0;
+        height:110px;
+        background-color: #000;
+
+        .instructor-ico{
+            bottom:24px;
+            left:24px;
+        }
+
+        .full-arrow{
+            left: auto;
+            right:24px;
+        }
     }
+
 
     .btn.box.white {
         position: absolute;

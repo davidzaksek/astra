@@ -69,11 +69,23 @@
                 @include transition(margin-left 0.15s ease);
             }
 
-    .btn.box {
-        position: absolute;
-        right: 0;
-        bottom: -206px;
-    }
+            .btn.box.dark {
+                position: absolute;
+                bottom: -140px;
+                right: 0;
+                height:110px;
+                background-color: #000;
+        
+                .instructor-ico{
+                    bottom:24px;
+                    left:24px;
+                }
+        
+                .full-arrow{
+                    left: auto;
+                    right:24px;
+                }
+            }
 }
 
 @media #{$bp_max_1080} {

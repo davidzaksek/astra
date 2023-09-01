@@ -15,7 +15,7 @@
         </main>
 
         @php do_action('get_footer') @endphp
-        @include('partials.footer')
+        @include('partials.footer-ai')
         @include('partials/custom/video-dialog')
         @php wp_footer() @endphp
         

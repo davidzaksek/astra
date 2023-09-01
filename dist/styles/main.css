@@ -527,9 +527,9 @@ input[type=submit].btn.astra-ai .inner-div .instructor-ico,
   margin-bottom: 2.4px;
   position: relative !important;
   left: 0 !important;
-  width: fit-content !important;
   bottom: 0 !important;
-  height: 25px;
+  height: 20px;
+  width: 76.8px !important;
 }
 input[type=submit].btn.yellow,
 .wp-block-button__link.yellow,
@@ -565,10 +565,11 @@ input[type=submit].btn.btn-horizont,
 .btn.btn-horizont {
   display: flex;
   flex-direction: row;
-  padding: 24px 49px 24px 24px;
+  padding: 24px 49px 24px 24px !important;
   justify-content: space-between;
   align-items: flex-end;
   width: 440px;
+  min-width: 100%;
   height: 110px;
   background: var(--contrast-secondary, #F0F5FC);
 }
@@ -590,6 +591,13 @@ input[type=submit].btn.btn-horizont .text,
   right: 0;
   bottom: 0;
   left: 0;
+}
+@media only screen and (max-width: 1114px) {
+  input[type=submit].btn.btn-horizont .text .text,
+  .wp-block-button__link.btn-horizont .text .text,
+  .btn.btn-horizont .text .text {
+    display: none;
+  }
 }
 input[type=submit].btn.btn-horizont img,
 .wp-block-button__link.btn-horizont img,
@@ -713,7 +721,7 @@ input[type=submit].btn.hollow.play::before,
 input[type=submit].btn.btn-icon .instructor-ico,
 .wp-block-button__link.btn-icon .instructor-ico,
 .btn.btn-icon .instructor-ico {
-  width: calc(100% - 60px);
+  width: 76.8px;
   position: absolute;
   left: 32px;
   bottom: 100px;
@@ -2555,6 +2563,7 @@ input[type=number] {
   width: 420px;
   display: inline-block;
   vertical-align: top;
+  margin-top: -82px;
 }
 .main-landing-block .primary-video-section {
   position: relative;
@@ -2650,7 +2659,7 @@ input[type=number] {
 .main-landing-block .popular-chapters {
   display: inline-block;
   width: 440px;
-  margin-top: 166px;
+  margin-top: 84px;
 }
 .main-landing-block .popular-chapters .link {
   float: right;
@@ -2900,10 +2909,20 @@ input[type=number] {
   -o-transition: margin-left 0.15s ease;
   transition: margin-left 0.15s ease;
 }
-.themes-block .btn.box {
+.themes-block .btn.box.dark {
   position: absolute;
+  bottom: -140px;
   right: 0;
-  bottom: -206px;
+  height: 110px;
+  background-color: #000;
+}
+.themes-block .btn.box.dark .instructor-ico {
+  bottom: 24px;
+  left: 24px;
+}
+.themes-block .btn.box.dark .full-arrow {
+  left: auto;
+  right: 24px;
 }
 
 @media only screen and (max-width: 1114px) {
@@ -3136,6 +3155,7 @@ input[type=number] {
 .instruktor-block .inner-child {
   display: flex;
   flex-direction: row;
+  z-index: 11;
 }
 .instruktor-block .inner-child .about-section {
   width: 100%;
@@ -3200,6 +3220,9 @@ input[type=number] {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.instruktor-block .inner-child .about-section .buttons .blue-btn:hover {
+  background-color: #2a38a0;
+}
 .instruktor-block .inner-child .about-section .buttons .white-btn {
   display: flex;
   height: 64px;
@@ -3217,6 +3240,10 @@ input[type=number] {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.instruktor-block .inner-child .about-section .buttons .white-btn:hover {
+  background-color: #3C50E0;
+  color: #fff;
+}
 .instruktor-block .inner-child .about-right {
   width: 100%;
   display: flex;
@@ -3228,17 +3255,57 @@ input[type=number] {
 }
 
 @media only screen and (max-width: 1114px) {
+  .instruktor-block {
+    padding: 20px;
+  }
   .instruktor-block .inner-child {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .instruktor-block .inner-child .about-right {
+    margin-bottom: 64px;
+  }
+  .instruktor-block .inner-child .about-right img {
+    aspect-ratio: 0.63;
+    max-height: 520px;
+    height: auto;
   }
   .instruktor-block .inner-child .about-section {
-    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instruktor-block .inner-child .about-section .bullet-list {
+    width: 100%;
+  }
+  .instruktor-block .inner-child .about-section .buttons {
+    flex-direction: column;
+  }
+  .instruktor-block .inner-child .about-section .buttons a {
+    width: 100%;
   }
 }
-.topics-section .btn.box {
-  position: absolute;
-  top: 50px;
-  right: 1px;
+.topics-section .btn.box.dark {
+  bottom: 0;
+  right: 0;
+  height: 110px;
+  background-color: #000;
+}
+.topics-section .btn.box.dark .instructor-ico {
+  bottom: 24px;
+  left: 24px;
+}
+.topics-section .btn.box.dark .full-arrow {
+  left: auto;
+  right: 24px;
+}
+.topics-section .btn.box.blue {
+  overflow: hidden;
+}
+.topics-section .topic-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: -108px;
 }
 .topics-section .chapters {
   margin-top: 40px;
@@ -3408,6 +3475,9 @@ input[type=number] {
   .topics-section .btn.box .text {
     max-width: 160px;
   }
+  .topics-section .topic-buttons {
+    display: none;
+  }
   .topics-section .chapters {
     margin-top: 64px;
   }
@@ -3429,10 +3499,20 @@ input[type=number] {
 .chapters-section .btn.play {
   margin: 32px 0;
 }
-.chapters-section .btn.box.blue {
+.chapters-section .btn.box.dark {
   position: absolute;
-  bottom: -116px;
+  bottom: -80px;
   right: 0;
+  height: 110px;
+  background-color: #000;
+}
+.chapters-section .btn.box.dark .instructor-ico {
+  bottom: 24px;
+  left: 24px;
+}
+.chapters-section .btn.box.dark .full-arrow {
+  left: auto;
+  right: 24px;
 }
 .chapters-section .btn.box.white {
   position: absolute;
@@ -3549,6 +3629,26 @@ input[type=number] {
 }
 .videos-section .btn.box.blue {
   margin-top: 20px;
+  overflow: hidden;
+}
+.videos-section .btn.box.dark {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  height: 110px;
+  background-color: #000;
+}
+.videos-section .btn.box.dark .instructor-ico {
+  bottom: 24px;
+  left: 24px;
+}
+.videos-section .btn.box.dark .full-arrow {
+  left: auto;
+  right: 24px;
+}
+.videos-section .btn-wrap {
+  display: flex;
+  flex-direction: column;
 }
 .videos-section .left-content {
   position: relative;
@@ -4420,7 +4520,7 @@ input[type=number] {
   margin-bottom: 32px;
 }
 .instructor-ai .mobile-img {
-  height: 640px;
+  max-height: 640px;
   width: auto;
 }
 .instructor-ai .preizkusi-div {
@@ -4661,7 +4761,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: solid;
+  border-style: none;
   border-width: 1px;
   border-color: #000;
 }
@@ -5090,6 +5190,9 @@ input[type=number] {
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.instructor-ai-bottom .options .inner .right .button:hover {
+  background: #CC9000;
 }
 .instructor-ai-bottom .drobni-tisk {
   color: var(--text-secondary-alt, #D9D9D9);

@@ -26,6 +26,7 @@
         width: 420px;
         display: inline-block;
         vertical-align: top;
+        margin-top:-82px;
     }
 
     .primary-video-section {
@@ -137,7 +138,7 @@
     .popular-chapters {
         display: inline-block;
         width: $popular-chap-width;
-        margin-top: 166px;
+        margin-top: 84px;
 
         .link {
             float: right;
